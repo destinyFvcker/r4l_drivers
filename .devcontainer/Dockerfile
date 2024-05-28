@@ -40,7 +40,11 @@ RUN sed -i 's/archive.ubuntu.com/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/source
     add-apt-repository "deb http://apt.llvm.org/$(lsb_release -cs)/ llvm-toolchain-$(lsb_release -cs)-17 main" && \
     apt-get update && \
     apt-get install -y libelf-dev libgmp-dev libmpc-dev bc flex \
-    bison u-boot-tools llvm-17 lld-17 clang-17 aptitude libssl-dev libpixman-1-dev libsdl2-2.0-0
+    bison u-boot-tools llvm-17 lld-17 clang-17 aptitude libssl-dev libpixman-1-dev libsdl2-2.0-0 && \
+    # [destinyfvcker] 后面实验需要新安装的包
+    apt-get update && \ 
+    apt-get install -y clangd
+
 
 # 2.1. Install Rust
 # - https://www.rust-lang.org/tools/install
@@ -61,8 +65,8 @@ RUN rustup --version && \
 # 2.3 Env
 RUN cargo install cargo-binutils; \
     rustup target add riscv64gc-unknown-none-elf; \
-	rustup component add rust-src; \
-	rustup component add llvm-tools-preview; \
-	rustup component add rustfmt; \
-	rustup component add clippy;
+    rustup component add rust-src; \
+    rustup component add llvm-tools-preview; \
+    rustup component add rustfmt; \
+    rustup component add clippy;
 

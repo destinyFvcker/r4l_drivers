@@ -26,7 +26,12 @@
       "extensions": [
         "rust-lang.rust-analyzer",
         "ms-vscode.cpptools",
-        "tamasfe.even-better-toml"
+        "tamasfe.even-better-toml",
+        "vscodevim.vim",
+        "esbenp.prettier-vscode",
+        "ms-vscode.makefile-tools",
+        "ms-azuretools.vscode-docker",
+        "llvm-vs-code-extensions.vscode-clangd"
       ]
     }
   }

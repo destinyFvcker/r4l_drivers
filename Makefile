@@ -9,8 +9,11 @@ rustavailable:
 	@echo "Rust is available!"
 
 # 下载树莓派操作系统镜像
+# [destinyfvcker] xz -d 解压缩，这里 - 在普通的情况下就代表标准输入，但是在这里因为使用了管道，
+# 所以表示 xz 命令应该从 curl 命令的输出之中读取数据
 2024-03-12-raspios-bookworm-arm64-lite.img:
 	@curl -sfL https://downloads.raspberrypi.com/raspios_lite_arm64/images/raspios_lite_arm64-2024-03-13/$@.xz | xz -d - > $@
+	qemu-img resize $@ 4G
 
 # 配置并构建内核
 linux_raspberrypi/$(KBUILD_OUTPUT)/arch/$(ARCH)/boot/Image:
