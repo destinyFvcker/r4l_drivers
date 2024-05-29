@@ -1,3 +1,4 @@
 [submodule "linux_raspberrypi"]
         path = linux_raspberrypi
         url = https://github.com/destinyFvcker/linux_raspberrypi.git
+        branch = rpi-6.6.y

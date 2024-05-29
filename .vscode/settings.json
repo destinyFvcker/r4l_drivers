@@ -1,0 +1,5 @@
+{
+  "clangd.arguments": [
+    "--compile-commands-dir=/workspaces/r4l_drivers/linux_raspberrypi/compile_commands.json --background-index --completion-style=detailed"
+  ]
+}
