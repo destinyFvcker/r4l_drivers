@@ -19,6 +19,8 @@ rustavailable:
 linux_raspberrypi/$(KBUILD_OUTPUT)/arch/$(ARCH)/boot/Image:
 	@$(MAKE) -C linux_raspberrypi ARCH=$(ARCH) O=$(KBUILD_OUTPUT) LLVM=$(LLVM) bcm2711_rust_defconfig
 	@$(MAKE) -C linux_raspberrypi ARCH=$(ARCH) O=$(KBUILD_OUTPUT) LLVM=$(LLVM) -j$$(nproc)
+	# @cd linux_raspberrypi/$(KBUILD_OUTPUT) && make rust-analyzer
+	# @python3 
 
 # 构建目标
 .PHONY: build
