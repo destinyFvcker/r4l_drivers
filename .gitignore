@@ -45,3 +45,5 @@ firmware/
 !firmware/.gitkeep
 2024-03-12-raspios-bookworm-arm64-lite.img
 # End of https://mrkandreev.name/snippets/gitignore-generator/#Vim,Rust,Vagrant
+
+**/.DS_Store
