@@ -1,8 +1,10 @@
 {
   "clangd.arguments": [
-    "--compile-commands-dir=${workspaceFolder}/linux_raspberrypi/compile_commands.json",
+    "--compile-commands-dir=${workspaceFolder}/linux_raspberrypi",
     "--background-index",
-    "--completion-style=detailed"
+    "--completion-style=detailed",
+    "--header-insertion=never",
+    "--log=verbose"
   ],
   "rust-analyzer.linkedProjects": [
     "${workspaceFolder}/linux_raspberrypi/build_4b/rust-project.json"
